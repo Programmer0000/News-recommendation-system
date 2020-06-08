@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>腾讯网注册</title>
+    <link rel="stylesheet" type="text/css" href="./css/regist.css" />
+    <script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="box">
+    <div class="left">
+        <img id="lunbo" style="width: 380px;height: 575px;" src="./img/regist1.jpg">
+    </div>
+    <div class="right">
+        <ul>
+            <li style="margin-left: 550px;margin-top: 20px;"><img style="width: 250px;height: 40px;" src="./img/regist4.jpg"></li>
+            <li style="font-size: 35px;margin-top: 20px;">欢迎注册腾讯网</li>
+            <li style="font-size: 22px;margin-top: 20px;">每一天，乐在沟通。<span style="color: #359eff;margin-left: 130px;">免费靓号</span></li>
+            <li style="margin-top: 50px;"><input type="text" id="username" value="" placeholder="昵称" style="width: 410px;height: 38px;font-size: 15px;" /></li>
+            <li style="margin-top: 30px;"><input type="password" id="password" value="" placeholder="密码" style="width: 410px;height: 38px;font-size: 15px;" /></li>
+            <li style="margin-top: 30px;"><input type="text" style="width: 70px;height: 38px;text-align: center;background-color: white;border: 1px solid lightgrey;" value="+86"
+                                                 disabled="disabled" />
+                <input type="text" id="mobile" value="" placeholder="手机号码" style="width: 322px;height: 38px;margin-left: 10px;font-size: 15px;border: 1px solid lightgrey;" />
+            </li>
+            <li style="color: #999;font-size: 10px;margin-top: 5px;">可通过该手机号找回密码</li>
+            <li style="margin-top: 10px;"><input type="text" style="width: 110px;height: 38px;border: 1px solid lightgrey;background-color: white;text-align: center;border-right: none;"
+                                                 value="手机验证码" disabled="disabled"><input type="text" id="yzm" style="width: 188px;height: 38px;font-size: 15px;border: 1px solid lightgrey;background-color: white;padding-left: 5px;"><button
+                    id="yzmbtn" style="width: 110px;height: 39px;font-size: 13px;border: 1px solid lightgrey;background-color: white;border-left: none;text-align: center;color: #666;">获取验证码</button>
+                <span id="yzmjudge" class="cang" style="font-size: 12px;color: red;">X验证码错误</span>
+            </li>
+            <li style="margin-top: 30px;"><button type="button" id="zhuce" style="width: 410px;height: 50px;font-size: 15px;background-color: #3487ff;color: white;border: none;">立即注册</button></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var trueyzm;
+    var num = 1;
+    setInterval(function() {
+        num++;
+        if (num == 4) {
+            num = 1;
+        }
+        var dizhi = "./img/regist" + num + ".jpg"
+        $("#lunbo").attr("src", dizhi)
+    }, 5000)
+
+    $("#yzmbtn").click(function() {
+        var mobile = $("#mobile").val();
+        var number = 60;
+        var t1 = setInterval(function() {
+            $("#yzmbtn").text(number+"s后重新获取");
+            $("#yzmbtn").attr("disabled",true);
+            number--;
+            if(number<0){
+                window.clearInterval(t1);
+                $("#yzmbtn").text("获取验证码");
+                $("#yzmbtn").attr("disabled",false);
+            }
+        }, 1000)
+        //发送验证码
+        $.ajax({
+            type:"POST",
+            url:"yzm",
+            data:{"mobile":mobile},
+            traditional: true,
+            contentType:"application/x-www-form-urlencoded;charset=utf-8",
+            success:function(data){
+                if(data!="failure"){
+                    trueyzm = data;
+                    // console.log(data);
+                    // console.log(trueyzm);
+                }else{
+                    //手机号为空，或者不正确
+                    console.log(data);
+                }
+            }
+        });
+    })
+    //点击注册
+    $("#zhuce").click(function () {
+        var username = $("#username").val();
+        var password = $("#password").val();
+        var mobile = $("#mobile").val();
+        var yzm = $("#yzm").val();
+        if(yzm != trueyzm){
+            $("#yzmjudge").attr("class","show");
+        }else{
+            $("#yzmjudge").attr("class","cang");
+            $.ajax({
+                type:"POST",
+                url:"regist",
+                data:{"username":username,"password":password,"mobile":mobile},
+                traditional: true,
+                contentType:"application/x-www-form-urlencoded;charset=utf-8",
+                success:function(data){
+                    if(data == "success"){
+                        window.location = "login.html";
+                    }
+                }
+            });
+        }
+    })
+</script>
+</html>

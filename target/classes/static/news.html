@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻页面</title>
+		<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#top1{
+				width: 100%;
+				height: 36px;
+				border-bottom: 1px solid rgb(235, 235, 235);
+			}
+			#top1 ul li{
+				float: left;
+				list-style: none;
+				font-size: 12px;
+				color: #333;
+				margin-left: 30px;
+			}
+			#top1 ul li a{
+				color: #333;
+				text-decoration: none;
+			}
+			#top2{
+				width: 1000px;
+				height: 85px;
+				/* border: 1px solid red; */
+				padding-left: 110px;
+			}
+			#mid_left{
+				width: 100px;
+				float: left;
+				padding-left: 110px;
+				border-right: 1px solid rgb(235, 235, 235);
+			}
+			#mid_left ul li{
+				margin-top: 30px;
+			}
+			#mid_right{
+				width: 550px;
+				float: left;
+				margin-left: 40px;
+				font-size: 15px;
+				line-height: 30px;
+				/* border: 1px solid red; */
+			}
+			#bottom{
+				width: 600px;
+				margin-top: 2300px;
+				margin-left: 210px;
+				/*border: 1px solid red;*/
+			}
+			#myPL ul{
+				list-style: none;
+			}
+			#PL{
+				margin-top: 30px;
+			}
+			#PL ul{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top1">
+			<ul>
+				<li style="margin-left: -30px;"><img onclick="goIndex()" src="img/logo.jpg" style="width: 120px;height: 50px;margin-top: -15px;"></li>
+				<li><a href="javascript:;">要闻</a></li>
+				<li><a href="javascript:;">娱乐</a></li>
+				<li><a href="javascript:;">财经</a></li>
+				<li><a href="javascript:;">体育</a></li>
+				<li><a href="javascript:;">图片</a></li>
+				<li><a href="javascript:;">时尚</a></li>
+				<li style="margin-left: 450px;"><input type="text" placeholder="中国青年网" style="width: 120px;height: 20px;margin-top: -5px;background-color: #EDEDED;border: none;font-size: 10px;color: #EDEDED;"/></li>
+				<li><a href="javascript:;" id="collection">收藏</a></li>
+				<li id="user"></li>
+			</ul>
+		</div>
+		<div id="top2">
+			<h1 id="news_title"></h1>
+		</div>
+		<div id="mid_left">
+			<ul style="list-style: none;color: #C6C6C6;font-size: 10px;">
+				<li style="margin-top: 0px;">作者：</li>
+				<li id="news_author"></li>
+				<li><img src="img/news_fx.jpg" style="width: 80px;height: 220px;margin-left: -25px;margin-top: 50px;"></li>
+			</ul>
+		</div>
+		<div id="mid_right">
+			<p id="news_content">原标题：让干部有更多时间和精力抓落实——中央办公厅有关负责人就《中共中央办公厅关于持续解决困扰基层的形式主义问题为决胜全面建成小康社会提供坚强作风保证的通知》答记者问</br>
+
+新华社北京4月14日电 近日，中共中央办公厅发出《关于持续解决困扰基层的形式主义问题为决胜全面建成小康社会提供坚强作风保证的通知》（以下简称《通知》）。中央办公厅有关负责人就《通知》有关情况，接受了记者专访。</br>
+
+问：请介绍一下《通知》出台的背景和意义。</br>
+
+答：以习近平同志为核心的党中央确定2019年为“基层减负年”，着力解决困扰基层的形式主义问题，让基层干部轻装上阵，取得明显成效。去年年底，习近平总书记强调，形式主义官僚主义之弊非一日之寒，从根子上减轻基层负担也非一日之功。要把加强党的作风建设放在突出位置来抓，驰而不息、落实落细。最近，习近平总书记明确要求，要聚焦形式主义官僚主义问题开展全面检视、靶向治疗，切实为基层减负，让干部有更多时间和精力抓落实。贯彻落实习近平总书记重要指示精神，总结“基层减负年”工作和新冠肺炎疫情防控中的经验教训，中央办公厅研究起草并印发《通知》，具有重要意义。第一，这是统筹推进疫情防控和经济社会发展工作的现实需要。在这场重大斗争中，各级党组织和广大党员、干部增强“四个意识”、坚定“四个自信”、做到“两个维护”，自觉践行初心使命，勇于担当、攻坚克难、无私奉献，充分展现出新时代共产党人的政治本色，让党旗在疫情防控和复工复产第一线高高飘扬。同时，工作中也暴露出一些不敢担当、不愿负责，敷衍应付、作风飘浮，多头重复向基层派任务要表格，执行政策层层加码、“一刀切”等问题，消耗了基层干部大量精力。目前，疫情防控和经济社会秩序恢复持续向好，扎实做好外防输入、内防反弹工作，破解复工复产难点、堵点，这些都需要我们切实解决工作中的形式主义官僚主义问题，让干部心无旁骛抓紧抓实抓细各项工作，奋力夺取疫情防控和实现经济社会发展目标双胜利。第二，这是深化拓展基层减负工作、关心关爱基层干部的重要举措。去年，各地区各部门认真贯彻落实党中央“基层减负年”决策部署，结合“不忘初心、牢记使命”主题教育出了不少好招实招，努力为基层减负、让基层有感。去年年底，习近平总书记在中央政治局专题民主生活会上明确指出，这项工作做得不错，但不应该只是一年的事情，已经开了个头，接下来要一直这样做下去，不要什么时候又来个文山会海大回潮，要深化拓展基层减负工作，让减负成果更好惠及人民群众。今年我国发展面临的风险挑战上升，基层干部责任更重、压力更大。特别是在疫情防控斗争中，广大基层干部时刻坚守岗位、满负荷运转，在平凡岗位上作出不平凡贡献，有的甚至牺牲了宝贵的生命。对于在一线连续奋战的基层干部，尤其需要多一些理解包容、多一份关心爱护。习近平总书记明确要求，各级党委和政府要多关心关爱奋战在疫情防控和复工复产第一线的广大基层干部，及时帮助他们解决遇到的实际困难和问题。《通知》贯彻落实习近平总书记重要指示要求，对深化拓展基层减负工作、关心关爱基层干部进一步作出具体部署。第三，这是充分调动广大党员、干部积极性主动性创造性，实现决胜全面建成小康社会、决战脱贫攻坚目标任务的迫切要求。当今世界正经历百年未有之大变局，我国正处于实现中华民族伟大复兴关键时期。今年以来，我国发展面临的国内外形势复杂多变，疫情对我国经济社会造成较大影响，尤其是目前国际疫情持续蔓延，世界经济下行风险加剧，各种因素叠加，做好今年经济社会发展工作难度更大。这对各级党组织和广大党员、干部既是大战，也是大考。越是形势严峻复杂越需要广大党员、干部勇当先锋、敢打头阵，越是任务艰巨繁重越需要广大党员、干部主动担当、积极作为。今年脱贫攻坚要全面收官，小康社会要全面建成，原本就有不少硬仗要打，现在还要努力克服疫情影响，必须绷紧弦再加把劲。贯彻新发展理念，全面做好“六稳”等工作，把时间抢回来，把损失补回来，从危机中捕捉和创造机遇，将我国发展的巨大潜力和强大动能充分释放出来，奋力实现经济社会发展目标任务，更加需要充分调动广大党员、干部干事创业的积极性主动性创造性。《通知》提出一系列重要举措，目的在于凝聚起广大党员、干部决战决胜的磅礴力量，为决胜全面建成小康社会、决战脱贫攻坚提供坚强作风保证。</br>
+
+问：《通知》聚焦哪些困扰基层的形式主义问题作出部署和要求？</br>
+
+答：形式主义官僚主义是一个顽症，不可能毕其功于一役。一些困扰基层的形式主义问题依然存在，有的十分顽固，还出现了一些新动向新表现。比如，形式主义官僚主义产生的思想根源远未根除，有的党员、干部学习党的创新理论没有真正入脑入心，贯彻落实党中央决策部署不用心、不务实、不尽力，少数干部没有牢固树立正确政绩观，贯彻新发展理念还想不清楚、弄不明白、做不到位；不担当不作为现象仍然在一定范围存在，干工作疲疲沓沓、拖拖拉拉，遇问题推诿扯皮、报喜不报忧，甚至弄虚作假、欺上瞒下。一些形式主义现象改头换面、隐形变异，有的屡禁不止，干部群众反映强烈。比如，发文件红头改白头、正式改便笺，同一议题会议层层重复开，过多要求基层提供视频图片资料作为工作佐证，调研扎堆流于形式干扰基层工作，以“属地管理”为由搞责任“甩锅”，等等。《通知》坚持问题导向、目标导向、结果导向相结合，坚持标准不降、力度不减，精准施治、靶向治疗，加强源头治理和制度建设，提出了一系列重要举措。强调要巩固拓展“不忘初心、牢记使命”主题教育成果，组织引导广大党员、干部深入学懂弄通做实习近平新时代中国特色社会主义思想，进一步坚定理想信念，牢固树立正确政绩观，持续筑牢克服形式主义官僚主义的思想政治根基。从领导机关和领导干部抓起改起，深入查找贯彻落实党的理论和路线方针政策上存在的政治偏差，坚决纠治贯彻落实党中央决策部署中的形式主义问题。《通知》就巩固提升突出问题整治成果，特别是在守住精文减会硬杠杠、进一步改进督查检查考核方式方法等方面提出了一些新措施，着力为基层干部降压减负。统筹推进疫情防控和经济社会发展工作，必须深入调查研究，“伸只脚到群众中去”。为防止疫情过后可能出现扎堆开展调研、增加基层负担的情况，《通知》明确提出要加强调研统筹，力戒搞形式、走过场，提高调研实效。这次应对疫情还暴露出我国在重大疫情防控体制机制上存在明显短板和基层治理能力的不足，《通知》着眼持续解决困扰基层的形式主义问题，就深化治理改革为基层放权赋能、转变领导方式和工作方法等方面提出了任务要求。</br>
+</p>
+		</div>
+	<div id="bottom">
+		<div id="myPL">
+			<ul>
+				<li style="font-size: 22px;color:#2a2a2a;">网友评论&nbsp;&nbsp;&nbsp;<span style="color: #ccc;font-size: 12px;">文明上网理性发言，请遵守新闻评论服务协议</span></li>
+				<li><textarea id="pltext" placeholder="说两句吧..." rows="6" cols="90" style="resize: none;color: #4b4b4b;font-size: 12px;margin-top: 15px;border: 3px solid rgb(240, 240, 240);outline: none;"></textarea></li>
+				<li><input type="button" id="fbpl" value="发表评论" style="background-color: rgb(50, 139, 209);border: none;width: 80px;height: 30px;color: #fff;font-size: 14px;font-family: 微软雅黑;margin-top: 5px;margin-left: 460px;"></li>
+			</ul>
+		</div>
+		<div id="PL">
+			<div style="margin-left: 40px;border-bottom: 1px solid rgb(240, 240, 240);width: 550px;"><p>全部评论</p></div>
+			<ul id="evaluate">
+			</ul>
+		</div>
+	</div>
+	</body>
+<script type="text/javascript">
+	var newsid = "";
+	var para = window.location.search;
+	newsid = para.substr(8);
+	$.ajax({
+		type:"POST",
+		url:"querynews",
+		data:{"newsid":newsid},
+		traditional: true,
+		contentType:"application/x-www-form-urlencoded;charset=utf-8",
+		success:function(data){
+			var msg = $.parseJSON(data);
+			document.getElementById("news_title").innerText = msg.title;
+			document.getElementById("news_author").innerText = msg.author;
+			// document.getElementById("news_title").innerText = msg.title;
+		}
+	});
+
+	//显示用户
+	$.ajax({
+		type:"POST",
+		url:"getSession",
+		traditional: true,
+		contentType:"application/x-www-form-urlencoded;charset=utf-8",
+		success:function(data){
+			if(data == ""){
+				$("#user").append('<a href="login.html">登录</a>&nbsp;&nbsp;&nbsp;<a href="regist.html">注册</a>');
+			}else{
+				$("#user").append('<a href="user.html">'+data+'</a>');
+			}
+		}
+	});
+
+	//显示评论
+	$.ajax({
+		type:"POST",
+		url:"showEvaluate",
+		data:{"newsid":newsid},
+		traditional: true,
+		contentType:"application/x-www-form-urlencoded;charset=utf-8",
+		success:function(data){
+			var e = JSON.parse(data);
+			var str = "";
+			for(var i=0;i<e.length;i++){
+				str += '<li style="color: #379be9;font-size: 12px;margin-top: 20px;">'+e[i].username+'</li>' +
+						'<li style="font-size: 12px;color: #4b4b4b;margin-top: 5px;">'+e[i].content+'</li>';
+				document.getElementById("evaluate").innerHTML = str;
+			}
+		}
+	});
+
+	$("#collection").click(function () {
+		$.ajax({
+			type:"POST",
+			url:"collection",
+			data:{"newsid":newsid},
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				if(data == "false"){
+					window.alert("请先登录");
+				}else if(data == "hascollection"){
+					window.alert("您已经收藏了");
+				}else if(data == "yes"){
+					window.alert("收藏成功");
+				}else {
+					window.alert("数据服务异常，请稍后再试!");
+				}
+			}
+		});
+	})
+	//点击发表评论
+	$("#fbpl").click(function () {
+		var pltext = $("#pltext").val();
+		if(pltext == ""){
+			alert("评论内容不能为空哦！")
+		}else{
+			$.ajax({
+				type:"POST",
+				url:"evaluate",
+				data:{"content":pltext,"newsid":newsid},
+				traditional: true,
+				contentType:"application/x-www-form-urlencoded;charset=utf-8",
+				success:function(data){
+					if(data == "login"){
+						alert("请先登录！")
+					}else if(data == "over"){
+						alert("您已经评论了！")
+					}else if(data == "ok"){
+						window.location = "news.html?newsid="+newsid;
+					}else {
+						alert("系统繁忙，请稍后再试！")
+					}
+				}
+			});
+		}
+	})
+
+	//跳转至首页
+	function goIndex() {
+		window.location = "index.html";
+	}
+</script>
+</html>

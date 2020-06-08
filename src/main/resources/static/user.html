@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人主页</title>
+		<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#box{
+				height: 555px;
+				width: 100%;
+				/* border: 1px solid black; */
+				background: #f5f5f5;
+			}
+			#left{
+				float: left;
+				width: 230px;
+				height: 400px;
+				margin-left: 200px;
+				margin-top: 50px;
+				background-color: white;
+				border-right: 1px solid rgb(234, 234, 234);
+			}
+			#left ul{
+				list-style: none;
+				width: 200px;
+				height: 150px;
+			}
+			#left ul li{
+				margin-left: -40px;
+				text-align: center;
+			}
+			#left_2{
+				margin-top: 40px;
+			}
+			#left_2 li:hover{
+				color: #fff;
+				background-color: #000;
+				opacity: 0.8;
+			}
+			#right{
+				float: left;
+				width: 600px;
+				height: 400px;
+				margin-top: 50px;
+				background-color: white;
+			}
+			#right ul{
+				list-style: none;
+			}
+			#right ul li{
+				margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<div id="left">
+			<ul id="tx">
+			</ul>
+			<ul id="left_2">
+				<li id="pl" style="height: 40px;padding-top: 20px;width: 230px;">我的评论</li>
+				<li id="sc" style="height: 40px;padding-top: 20px;width: 230px;">我的收藏</li>
+			</ul>
+		</div>
+		<div id="right">
+			<div style="width: 600px;height: 30px;font-size: 12px;margin-top: 20px;border-bottom: 1px solid rgb(234, 234, 234);color: #666;">
+				每一天，乐在沟通！
+			</div>
+			<div id="plsc" style="width: 600px;height: 350px;">
+			</div>
+		</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	//显示用户名
+	$.ajax({
+		type:"POST",
+		url:"getSession",
+		traditional: true,
+		contentType:"application/x-www-form-urlencoded;charset=utf-8",
+		success:function(data){
+			if(data == ""){
+			}else{
+				$("#tx").append('<li><img src="./img/touxiang.jpg" style="width: 80px;height: 80px;"></li>' +
+						'<li style="text-align: center;margin-top: 10px;">'+data+'</li>');
+			}
+		}
+	});
+
+	//点击我的评论
+	$("#pl").click(function () {
+		$.ajax({
+			type:"POST",
+			url:"queryEvaluateByUserId",
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				var pl = JSON.parse(data);
+				var str = "";
+				for(var i=0;i<pl.length;i++){
+					str += '<ul>' +
+							'<li style="font-size: 10px;">'+pl[i].title+'</li>' +
+							'<li style="margin-top: 10px;width: 500px;font-size: 14px;">'+pl[i].content+'</li>' +
+							'<li style="width: 30px;margin-top: 8px;"><a onclick="delpl('+pl[i].newsid+')" href="javascript:;" style="font-size: 14px;">删除</a></li>' +
+							'</ul>';
+					document.getElementById("plsc").innerHTML = str;
+				}
+			}
+		});
+	})
+
+	//点击评论的删除
+	function delpl(newsid){
+		$.ajax({
+			type:"POST",
+			url:"deleteEvaluate",
+			data:{"newsid":newsid},
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				if(data == "ok"){
+					window.location = "user.html";
+				}else {
+					alert("系统繁忙请稍后再试！")
+				}
+			}
+		});
+	}
+
+	//点击我的收藏
+	$("#sc").click(function () {
+		$.ajax({
+			type:"POST",
+			url:"queryCollectionByUserId",
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				var sc = JSON.parse(data);
+				var str = "";
+				for(var i=0;i<sc.length;i++){
+					str += '<ul>' +
+							'<li style="font-size: 14px;float: left;">'+sc[i].title+'</li>' +
+							'<li style="width: 30px;margin-top: 8px;"><a onclick="delsc('+sc[i].newsid+')" href="javascript:;" style="font-size: 14px;">删除</a></li>' +
+							'</ul>';
+					document.getElementById("plsc").innerHTML = str;
+				}
+			}
+		});
+	})
+
+	//点击收藏的删除
+	function delsc(newsid){
+		$.ajax({
+			type:"POST",
+			url:"deleteCollection",
+			data:{"newsid":newsid},
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				if(data == "ok"){
+					window.location = "user.html";
+				}else {
+					alert("系统繁忙请稍后再试！")
+				}
+			}
+		});
+	}
+</script>
+</html>

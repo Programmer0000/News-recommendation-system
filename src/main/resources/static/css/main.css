@@ -1,0 +1,503 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body{
+ 	font:12px "宋体","Arial Narrow",HELVETICA;
+ 	background:#fff;
+ 	margin: 0px;
+	padding: 0px;
+ }
+a,img{border:0;} 
+a{
+ 	text-decoration: none;
+ 	color: #172C45;
+ 	font-size: 14px;
+}
+a:hover{
+	color: #0C82FF;
+}
+/*热搜排行榜颜色*/
+.rs1{
+	font-size: 15px;
+	color: #DC143C;
+}
+.rs2{
+	font-size: 15px;
+	color: red;
+}
+.rs3{
+	font-size: 15px;
+	color: orangered;
+}
+.rs4{
+	font-size: 15px;
+	color: tomato;
+}
+
+/*头部区域开始*/
+.top{
+	width: 1000px;
+	height: 155px;
+	margin: 0 auto;
+	border: 0px solid #000;
+}
+.top .top_1{
+	width: 1000px;
+	height:48px;
+	/* border: 1px solid red; */
+	padding-top: 23px;
+	padding-bottom: 19px;;
+}
+.top .top_1 .logo{
+	float: left;
+}
+.top .top_1 .so{
+	float: left;
+	padding-left:150px;
+	padding-top: 5px;
+}
+.top .top_1 .so input{
+	width: 291px;
+	height: 32px;
+	float: left;
+}
+.top .top_1 .so a{
+	display: block;
+	float: left;
+}
+.top .top_1 .login{
+	float: right;
+	/* border: 1px solid red; */
+}
+.top .top_1 .login ul li{
+	float: left;
+}
+.top .top_1 .login ul li button{
+	width: 35px;
+	height: 35px;
+	background-color: #f5f5f5;
+	color: #60a5e4;
+	border: 1px solid #ededed;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 8px;
+}
+/*导航开始*/
+.top .top_2{
+	width: 987px;
+	height: 57px;
+	border: 0px solid #000;
+	background: url(../img/menu.jpg);
+	padding-top: 8px;
+	padding-left: 8px;
+	padding-right: 5px;
+}
+.top .top_2 .menu{
+	float: left;
+	width: 126px;
+	height: 25px;
+	padding-left: 15px;
+	padding-right: 6px;
+
+}
+.top .top_2 .menu a{
+	color: #fff;
+	display: block;
+	float: left;
+	line-height: 25px;
+	margin-left: 6px;
+	margin-right: 7px;
+	font-family: 微软雅黑;
+
+}
+.top .top_2 .menu a.sjb{
+	color: #FCFF00;
+}
+.top .top_2 .menu1{
+	float: left;
+	width: 84px;
+	height: 25px;
+	padding-left: 10px;
+	padding-right: 6px;
+
+}
+.top .top_2 .menu1 a{
+	color: #fff;
+	display: block;
+	float: left;
+	line-height: 25px;
+	margin-left: 6px;
+	margin-right: 7px;
+	font-family: 微软雅黑;
+
+}
+/*导航结束*/
+/*头部区域绑带*/
+/*广告区域1开始*/
+/*多个广告一个样式开始*/
+.ad{
+	width: 1000px;
+	height: 90px;
+	margin: 0 auto;
+	margin-top: 12px;
+	/* border: 1px solid red; */
+}
+.ad a{
+	display: block;
+}
+.ad a.left{
+	float: left;
+}
+.ad a.right{
+	float: right;
+}
+/*多个广告一个样式结束*/
+/*第一个广告开始*/
+.ad1{
+	width: 1000px;
+	height: 75px;
+	margin: 0 auto;
+	margin-top: 12px;
+}
+.ad1 a{
+	display: block;
+}
+.ad1 a.left{
+	float: left;
+}
+.ad1 a.right{
+	float: right;
+}
+/*第一个广告结束*/
+/*广告区域1结束*/
+/*主体新闻1开始*/
+.news_1{
+	width: 1000px;
+	height: 600px;
+	margin:0 auto;
+	margin-top: 12px;
+	 /*border: 1px solid red;*/
+}
+.news_1 .left{
+	width: 700px;
+	height: 600px;
+	float: left;
+	/*border: 1px solid red;*/
+}
+.news_1 .left .left_1{
+	width: 350px;
+	height: 600px;
+	float: left;
+	border-top: 1px solid #C8DCF2;
+}
+.news_1 .left .left_1 ul{
+	margin-top: 15px;
+	color: #333;
+	font-size: 12px;
+}
+.news_1 .left .left_1 ul li{
+	height: 40px;
+	margin-top: 5px;
+	 /*border: 1px solid red;*/
+}
+.news_1 .left .left_2{
+	width: 330px;
+	height:232px;
+	float: right;
+	margin-bottom: 12px;
+	border-top: 1px solid #58C03B;
+}
+.news_1 .left .left_2 ul{
+	margin-top: 15px;
+	color: #333;
+	font-size: 12px;
+}
+.news_1 .left .left_2 ul li{
+	margin-top: 10px;
+}
+.news_1 .left .left_3{
+	width: 330px;
+	height:332px;
+	float: right;
+	margin-bottom: 12px;
+	border-top: 1px solid #58C03B;
+}
+.news_1 .left .left_3 .v{
+	width: 145px;
+	height: 103px;
+	float: left;
+	padding-top: 12px;
+	padding-right: 20px;
+}
+.news_1 .left .left_3 .v a{
+	font-size: 12px;
+	display: block;
+	padding-top: 10px;
+}
+.news_1 .left .left_3 .v a:hover{
+	text-decoration: underline;
+	color: #CD0200;
+}
+.news_1 .left .left_3 p{
+	float: left;
+	margin: 0px;
+	padding-top: 12px;
+}
+.news_1 .left .left_4{
+	width: 330px;
+	height:193px;
+	float: right;
+	margin-bottom: 12px;
+	border-top: 1px solid #58C03B;
+}
+.news_1 .left .left_4 .cup{
+	float: left;
+	margin-top: 12px;
+}
+.news_1 .left .left_4 .t{
+	width: 192px;
+	height: 60px;
+	float: left;
+	margin-top: 12px;
+	padding-left: 20px;
+	padding-top: 12px;
+}
+.news_1 .left .left_4 .t a{
+	font-weight: 700;
+	color: #3B639F;
+}
+.news_1 .left .left_4 p{
+	float: left;
+	margin: 0px;
+	padding-top: 20px;	
+}
+.news_1 .left .left_5{
+	width: 330px;
+	height:220px;
+	float: right;
+	border-top: 1px solid #C8DCF2;
+}
+.news_1 h2{
+	margin-left: -12px;
+	padding: 10px 0 0 12px;
+	font-weight: bold;
+}
+.news_1 h2 a{
+	color: #458FCE;
+	font-weight: 700;
+}
+.news_1 h2 a:hover{
+	text-decoration: underline;
+}
+.news_1 h3.huating{
+	padding-left: 60px;
+}
+.news_1 h3{
+	margin-top: 10px;
+}
+.news_1 h3 a{
+	color: #3B639F;
+	font-weight: 700;
+}
+.news_1 h3 a:hover{
+	text-decoration: underline;
+}
+.news_1 p a{
+	display: block;
+}
+.news_1 p a:hover{
+	text-decoration: underline;
+	color: #CD0200;
+
+}
+.news_1 .right{
+	width: 280px;
+	height: 600px;
+	float: right;
+	/* border: 1px solid red; */
+}
+.news_1 .right .right_1{
+	width: 278px;
+	height: 238px;
+	margin-bottom: 12px;
+	border: 1px solid #D2E1F1;
+	background-image: url(../img/mix_menu.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.news_1 .right .right_1 div{
+	width: 248px;
+	height: 50px;
+	margin-left: 15px;
+	float: left;
+	margin-top: -15px;
+	/* border: 1px solid blue; */
+}
+.news_1 .right .right_1 div a{
+	font-size: 12px;
+	width: 48px;
+	line-height: 35px;
+	text-align: left;
+	color: #4B6386;
+	display:block;
+	float: left;
+	padding-left: 12px;
+	/* border: 1px solid red; */
+}
+.news_1 .right .right_1 div a:hover{
+	text-decoration: underline;
+}
+.news_1 .right .right_3{
+	width: 280px;
+	height: 181px;
+	margin-top: 12px;
+	border: 1px solid #D2E1F1;
+}
+.news_1 .right .right_4{
+	width: 280px;
+	height: 241px;
+	margin-top: 12px;
+	border: 1px solid #D2E1F1;
+}
+.news_1 .right .right_4 .tu{
+	float: left;
+	margin-top: 17px;
+	padding-left: 12px;
+}
+.news_1 .right .right_4 .jiao{
+	float: left;
+	margin-top: 17px;
+	padding-left: 12px;
+	width: 157px;
+}
+.news_1 .right .right_4 .jiao select{
+	display: block;
+	float: left;
+}
+.news_1 .right .right_4 p{
+	float: left;
+	font-size: 14px;
+	margin:0px;
+	padding: 0 18px 0 18px;
+	line-height: 22px;
+
+}
+/*主体新闻1结束*/
+/*主体新闻2开始*/
+.news_2{
+	width: 1000px;
+	height: 304px;
+	margin:0 auto;
+	margin-top: 12px;
+}
+.news_2 .left{
+	width: 660px;
+	height: 303px;
+	margin-right: 20px;
+	float: left;
+	border-top: 1px solid #C8DCF2;
+}
+.news_2 .left .left_1{
+	width: 330px;
+	height: 303px;
+	float: left;
+}
+.news_2 .left .left_2{
+	width: 330px;
+	height: 303px;
+	float: left;
+}
+.news_2 .right{
+	width: 320px;
+	height: 303px;
+	float: left;
+	border: 0px solid #000;
+	border-top: 1px solid #C8DCF2;
+}
+.news_2  h3{
+	margin:0px;
+	padding:0px;
+	padding-top: 5px;
+	float: left;
+	width: 320px;
+}
+.news_2  h3 a{
+	color: #4697E6;
+}
+.news_2 .tu{
+	margin-top: 23px;
+	float: left;
+}
+.news_2 .jiao{
+	width: 197px;
+	height: 57px;
+	margin-top: 23px;
+	float: left;
+}
+.news_2 .jiao a{
+	color: #3B639F;
+	font-weight: 700;
+	line-height: 26px;
+	padding-left: 13px;
+	display: block;
+}
+.news_2 .jiao a:hover{
+	text-decoration: underline;
+}
+.news_2 ul{
+	list-style-type: none;
+	float: left;
+	margin:0;
+	padding:0;
+	margin-top: 28px;
+}
+.news_2  ul li{
+	width: 320px;
+	height: 28px;
+}
+.news_2  ul li a:hover{
+	text-decoration: underline;
+	color: #CD0200;
+}
+/*主体新闻2结束*/
+/*底部区域开始*/
+.footer{
+	width: 1000px;
+	height: 170px;
+	margin:0 auto;
+	border: 0px solid #000;
+	margin-top: 12px;
+}
+.footer .footer_1{
+	width: 910px;
+	height: 100px;
+	margin:0 auto;
+	border: 0px solid #000;
+	text-align: center;
+}
+.footer .footer_1 p{
+	font-family: 宋体;
+}
+.footer .footer_1 p a{
+	font-size: 12px;
+	color: #515151;
+}
+.footer .footer_1 p a.yg{
+	color: #BD0A01;
+}
+.footer .footer_1 p a:hover{
+	color: #BD0A01;
+	text-decoration: underline;
+}
+.footer .footer_2{
+	width: 1000px;
+	height: 70px;
+	text-align: center;
+	padding-top: 12px;
+	border: 0px solid #000;
+}
+
+/*底部区域开始*/

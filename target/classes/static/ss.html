@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>搜索</title>
+		<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+		<script src="js/jquery.pagination.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#top1{
+				width: 100%;
+				height: 50px;
+			}
+			#top1 ul li{
+				list-style: none;
+				float: left;
+			}
+			#top2{
+				width: 100%;
+				height: 20px;
+				margin-top: -20px;
+				border-bottom: 1px solid rgb(241, 241, 241);
+			}
+			#top2 ul li{
+				list-style: none;
+				float: left;
+				margin-left: 20px;
+				margin-top: -10px;
+			}
+			#top2 ul li a{
+				text-decoration: none;
+				font-size: 11px;
+				color: #555;
+			}
+			#mid{
+				margin-top: 30px;
+			}
+			#mid ul li{
+				list-style: none;
+				margin-top: 40px;
+			}
+			#mid ul li a{
+				margin-left: 60px;
+				color: rgb(0, 0, 204);
+				font-size: 16px;
+			}
+			#bottom{
+				width: 100%;
+				height: 30px;
+				margin-top: 50px;
+				margin-left: 50px;
+			}
+			#bottom ul li{
+				list-style: none;
+				float: left;
+				margin-top: -16px;
+				margin-left: 10px;
+			}
+			#bottom ul li button{
+				width: 30px;
+				height: 30px;
+				background-color: white;
+				border: 1px solid #ebebeb;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top1">
+			<ul>
+				<li><img src="img/ss.jpg" style="width: 100px;height: 50px;margin-top: -14px;margin-left: -40px;"></li>
+				<li><input type="text" style="width: 430px;height: 25px;margin-top: -2px;text-align: left;"/></li>
+				<li><button style="width: 80px;height: 29px;margin-top: -2px;margin-left: -5px;background-color: rgb(250, 250, 250);border: 0.5px solid #C6C6C6;border-left: none;">搜狗搜索</button></li>
+			</ul>
+		</div>
+		<div id="top2">
+			<ul>
+				<li style="margin-left: 60px;"><a href="javascript:;">网页</a></li>
+				<li><a href="javascript:;">新闻</a></li>
+				<li><a href="javascript:;">微信</a></li>
+				<li><a href="javascript:;">知乎</a></li>
+				<li><a href="javascript:;">图片</a></li>
+				<li><a href="javascript:;">视频</a></li>
+				<li><a href="javascript:;">明医</a></li>
+				<li><a href="javascript:;">英文</a></li>
+				<li><a href="javascript:;">问问</a></li>
+				<li><a href="javascript:;">学术</a></li>
+			</ul>
+		</div>
+		<div id="mid">
+			<ul id="newstitle">
+			</ul>
+		</div>
+		<div id="bottom" style="margin-left: 100px;">
+			<div class="Pagination" id="pagination"></div>
+		</div>
+	</body>
+<script type="text/javascript">
+	var pageIndex = 1;
+	var size = 5;
+	var count = "";
+	var news = "";
+	//得到输入内容
+	$(function () {
+		var para = decodeURI(window.location.search);
+		news = para.substr(6);
+		getNews();
+		queryList(pageIndex);
+	})
+	function getNews() {
+		$.ajax({
+			type:"POST",
+			url:"search",
+			data:{"text":news},
+			traditional: true,
+			contentType:"application/x-www-form-urlencoded;charset=utf-8",
+			success:function(data){
+				if(data != null){
+					// var msg = $.parseJSON(data);
+					news = JSON.parse(data);
+					count = Math.ceil(news.length/size);
+					var str="";
+					var p = pageIndex-1;
+					for(var i=p*size;i<p*size+size;i++){
+						str += '<li><a href="news.html?newsid='+news[i].newsid+'">'+news[i].title+'</a></li>';
+						document.getElementById("newstitle").innerHTML = str;
+					}
+					//分页
+					$("#pagination").pagination({
+						pageCount: count,
+						coping: true,
+						current: pageIndex,//当前第几页
+						prevContent: '上一页',
+						nextContent: '下一页',
+						callback: function(api) {
+							pageCallback(api);
+						}
+					});
+				}
+			}
+		});
+	}
+	function pageCallback(api) {
+		var pageIndex = api.getCurrent() //获取当前代码
+		queryList(pageIndex);
+	}
+	function queryList(pageIndex){
+		var str="";
+		var p = pageIndex-1;
+		for(var i=p*size;i<p*size+size;i++){
+			str += '<li><a href="news.html?newsid='+news[i].newsid+'">'+news[i].title+'</a></li>';
+			document.getElementById("newstitle").innerHTML = str;
+		}
+	}
+</script>
+</html>

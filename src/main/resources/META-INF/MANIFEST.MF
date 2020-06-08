@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Class-Path: tomcat-embed-websocket-9.0.33.jar commons-codec-1.13.jar s
+ pring-web-5.2.5.RELEASE.jar spring-boot-starter-2.2.6.RELEASE.jar net
+ ty-common-4.1.48.Final.jar jackson-datatype-jdk8-2.10.3.jar jul-to-sl
+ f4j-1.7.30.jar spring-context-support-5.2.5.RELEASE.jar tomcat-embed-
+ el-9.0.33.jar netty-codec-4.1.48.Final.jar spring-core-5.2.5.RELEASE.
+ jar jackson-annotations-2.10.3.jar httpcore-4.4.13.jar logback-core-1
+ .2.3.jar spring-webmvc-5.2.5.RELEASE.jar jackson-module-parameter-nam
+ es-2.10.3.jar spring-boot-autoconfigure-2.2.6.RELEASE.jar hibernate-v
+ alidator-6.0.18.Final.jar mybatis-plus-core-3.3.0.jar spring-tx-5.2.5
+ .RELEASE.jar logback-classic-1.2.3.jar lettuce-core-5.2.2.RELEASE.jar
+  classmate-1.5.1.jar mybatis-plus-extension-3.3.0.jar mybatis-spring-
+ boot-autoconfigure-2.1.1.jar HikariCP-3.4.2.jar activation-1.1.1.jar 
+ netty-handler-4.1.48.Final.jar netty-buffer-4.1.48.Final.jar jboss-lo
+ gging-3.4.1.Final.jar tomcat-embed-core-9.0.33.jar spring-oxm-5.2.5.R
+ ELEASE.jar mysql-connector-java-8.0.19.jar jaxb-core-2.3.0.1.jar fast
+ json-1.2.62.jar jsqlparser-3.1.jar log4j-to-slf4j-2.12.1.jar mybatis-
+ 3.5.3.jar mybatis-spring-boot-starter-2.1.1.jar spring-aop-5.2.5.RELE
+ ASE.jar spring-beans-5.2.5.RELEASE.jar jackson-datatype-jsr310-2.10.3
+ .jar spring-boot-starter-data-redis-2.2.6.RELEASE.jar netty-resolver-
+ 4.1.48.Final.jar spring-data-redis-2.2.6.RELEASE.jar spring-boot-star
+ ter-tomcat-2.2.6.RELEASE.jar spring-boot-starter-validation-2.2.6.REL
+ EASE.jar reactive-streams-1.0.3.jar httpclient-4.5.12.jar mybatis-spr
+ ing-2.0.3.jar spring-boot-starter-jdbc-2.2.6.RELEASE.jar spring-data-
+ keyvalue-2.2.6.RELEASE.jar log4j-api-2.12.1.jar javax.activation-api-
+ 1.2.0.jar reactor-core-3.3.4.RELEASE.jar jaxb-impl-2.3.2.jar spring-j
+ cl-5.2.5.RELEASE.jar spring-boot-devtools-2.2.6.RELEASE.jar spring-bo
+ ot-starter-logging-2.2.6.RELEASE.jar aliyun-java-sdk-core-4.3.3.jar s
+ nakeyaml-1.25.jar spring-expression-5.2.5.RELEASE.jar mybatis-plus-3.
+ 3.0.jar jakarta.annotation-api-1.3.5.jar spring-boot-starter-web-2.2.
+ 6.RELEASE.jar jakarta.validation-api-2.0.2.jar spring-context-5.2.5.R
+ ELEASE.jar spring-boot-2.2.6.RELEASE.jar slf4j-api-1.7.30.jar spring-
+ jdbc-5.2.5.RELEASE.jar spring-data-commons-2.2.6.RELEASE.jar aliyun-j
+ ava-sdk-dysmsapi-1.1.0.jar gson-2.8.6.jar hutool-all-5.2.5.jar jackso
+ n-core-2.10.3.jar jaxb-api-2.3.1.jar netty-transport-4.1.48.Final.jar
+  mybatis-plus-boot-starter-3.3.0.jar org.jacoco.agent-0.8.3-runtime.j
+ ar mybatis-plus-annotation-3.3.0.jar jackson-databind-2.10.3.jar spri
+ ng-boot-starter-json-2.2.6.RELEASE.jar
+Main-Class: com.tencent.TencentApplication
+
